@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/productos_dev
+    username: user_dev
+    password: pass_dev
+
+app:
+  name: "Productos Service (DEV)"
+  tax: 0.19
