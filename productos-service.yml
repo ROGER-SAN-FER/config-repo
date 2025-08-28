@@ -10,10 +10,18 @@ spring:
         format_sql: true
     open-in-view: false
 
+  datasource:
+    url: jdbc:postgresql://localhost:5432/productos_db
+    username: postgres
+    password: "{cipher}AQCGnASukR7HjF00AYSLyIpFKO8wQfPAOP79orPEVe2g3jCZqeasXfubUM07c/G2GIxqeC9ZIWwrP35d/cqug0enptVRzLuhNydRQZbKA7p0nFchUsJlN5qoyO5s7CIY7BMttzbFcvrGfK4u/88jzLPV7/nNn/XlU3++YQQ/8Vqw/50NOcyLknHBic6ZddHhC5LvnfoUiWAs3QxzpVJaRmojp11YV7c3DShxaJ4co1alKtqulvcFUoaLadgKL0qLhnDWFJ2rqvYKiVeQFhxWufspPxlPZXkZDCaWEfGTMSOE2mptpSAqaP8DEUOQ2Us6T82eaNIGR0i/nxJKqirdLBzqg0p/zTy7Sf3AHyG6tTMnXA1SgWFxtEMqzcAXX7PzVwY="
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    show-sql: true
+
   # El Gateway valida JWT con la CLAVE PÚBLICA (monta el mismo public.pem aquí)
 security:
   oauth2:
     resourceserver:
       jwt:
         public-key-location: "{cipher}AQCZdy2GkFNjqKstBpOyucMAnp46teEOtYYsusBg7nA4/NL/NghOC5tveWXSjZhmv0zPArJ+fEYFzDR3nAkMBwNHGQM32Vnrb9AYSY7dk73dJsOaRfzZhvgdE8utSQg/nVemy9SWZxO6lL7SSfoeWDMSNG0bf4Y7lzJ9ESrfQq8/s4QaBQV+1sDTU3Mq4FR0Cft6lk7DH/YvsXp8WF1LhR5PSrbJ3pOqcu9ILBVnp8c4c38xGMhxrue2YOjzqolxSLjWfo8fSt0MgFsQUAA/Xfe3r7kaU6NHn3mYPNgBhrpFyRVyUeaLhu7HhjvU8cOIAmAEB3mEVH5mGcTI50CgV7nWIHKHc1r57WvFEwvyh/GJe8rh7hbXAZza+shg0CDs3ZkzCLP6VQyPoekETc2S3bxyDUKSpr+ZkDWQHm2pmmwl/8y0U7S8BdoE9FW0h5Jo9yYJyezv14mXkGOO1HZxiPrHmXq+fZnr4Rqbb9JfHihFCHRoMd99GT/vTksP5DxqSUVNfxfK6+UEsjiXSj4Z5SZgrXPbWCXTTlvBh13Mcw9G6pXWrJ1DLk0DOU6pgqPDUYE5I03Qhv5SCrLnmxt+XJyNHRUUYJDX7b7vCDnaK41FY4DYahpajxrWNz/uB9K5OUF6ldjHEn6/BLIjAI5fJ+Jiv4fq2T4NOsICa/5oY/A8r9Ggw6kJGZw4CLKtCjBint2CMTYxJHWy3ukIdPc7VEJFqWoUTWofG6qVqz5Pnno5JOrsX/EWOkvUokZfBDM4VzqbyxTXUCi6rl4Z1MRFQZy8IER0e9iD4WDwGBRQxh0wsWDnx13jTTdmFEX61xUDEuV8ry7zCq+U1mAamSIGbKJvn69XRsBMqfoweaKh4SOJ1vLe2TF1NuzqzcpNEyyFKr1hv+x5+OXUeqABIfVaRBBB"
-file:${PUBLIC_KEY}
