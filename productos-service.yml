@@ -1,3 +1,6 @@
+server:
+  port: 8082  # Puerto exclusivo para este microservicio
+
 spring:
   jpa:
     hibernate:
