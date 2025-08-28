@@ -1,9 +1,0 @@
-spring:
-  datasource:
-    url: jdbc:postgresql://localhost:5432/productos_db
-    username: postgres
-    password: "{cipher}AQCGnASukR7HjF00AYSLyIpFKO8wQfPAOP79orPEVe2g3jCZqeasXfubUM07c/G2GIxqeC9ZIWwrP35d/cqug0enptVRzLuhNydRQZbKA7p0nFchUsJlN5qoyO5s7CIY7BMttzbFcvrGfK4u/88jzLPV7/nNn/XlU3++YQQ/8Vqw/50NOcyLknHBic6ZddHhC5LvnfoUiWAs3QxzpVJaRmojp11YV7c3DShxaJ4co1alKtqulvcFUoaLadgKL0qLhnDWFJ2rqvYKiVeQFhxWufspPxlPZXkZDCaWEfGTMSOE2mptpSAqaP8DEUOQ2Us6T82eaNIGR0i/nxJKqirdLBzqg0p/zTy7Sf3AHyG6tTMnXA1SgWFxtEMqzcAXX7PzVwY="
-    driver-class-name: org.postgresql.Driver
-
-  jpa:
-    show-sql: true
