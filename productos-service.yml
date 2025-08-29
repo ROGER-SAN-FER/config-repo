@@ -1,5 +1,5 @@
 app:
-  mensaje: "Hola desde Config Server"
+  mensaje: "Hola desde Config Server modificado"
 
 server:
   port: 8082  # Puerto exclusivo para este microservicio
