@@ -22,3 +22,9 @@ spring:
       resourceserver:
         jwt:
           public-key-location: file:/D:/Proyectos backend/prueba-backendSpringBoot/claves/public_key.pem
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,env,refresh
