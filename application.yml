@@ -1,8 +1,0 @@
-global:
-  message: Hola desde Config Server
-feature:
-  flags:
-    audits-enabled: true
-logging:
-  level:
-    root: INFO
