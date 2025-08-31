@@ -59,6 +59,8 @@ eureka:
       defaultZone: http://localhost:8761/eureka/
 
 spring:
+  application:
+    name: pedidos-service
   kafka:
     bootstrap-servers: localhost:9094
     producer:

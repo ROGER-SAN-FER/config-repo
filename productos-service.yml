@@ -5,6 +5,8 @@ server:
   port: 8082  # Puerto exclusivo para este microservicio
 
 spring:
+  application:
+    name: productos-service
   jpa:
     hibernate:
       ddl-auto: update
