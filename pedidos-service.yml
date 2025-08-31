@@ -66,3 +66,19 @@ spring:
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
     properties:
       spring.json.add.type.headers: false   # payload limpio (opcional)
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,prometheus
+  endpoint:
+    prometheus:
+      enabled: true
+  metrics:
+    tags:
+      application: ${spring.application.name}
+    distribution:
+      # Para percentiles (p95/p99) de latencia HTTP
+      percentiles-histogram:
+        http.server.requests: true

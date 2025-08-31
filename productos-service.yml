@@ -30,7 +30,17 @@ management:
   endpoints:
     web:
       exposure:
-        include: health,info,env,refresh
+        include: health,info,env,refresh,metrics,prometheus
+  endpoint:
+    prometheus:
+      enabled: true
+  metrics:
+    tags:
+      application: ${spring.application.name}
+    distribution:
+      # Para percentiles (p95/p99) de latencia HTTP
+      percentiles-histogram:
+        http.server.requests: true
 
 eureka:
   client:
