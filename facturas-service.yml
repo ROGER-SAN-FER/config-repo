@@ -1,0 +1,21 @@
+server:
+  port: 8091
+
+spring:
+  application:
+    name: facturas-service
+  kafka:
+    bootstrap-servers: localhost:9094
+    consumer:
+      group-id: facturas
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+    properties:
+      # Indica al deserializer qué clase esperar como payload JSON
+      spring.json.value.default.type: com.prueba.pedidosservice.domain.event.PedidoCreado
+      spring.json.trusted.packages: "*"   # en producción: sé específico
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
