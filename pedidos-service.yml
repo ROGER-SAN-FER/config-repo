@@ -69,6 +69,13 @@ spring:
     properties:
       spring.json.add.type.headers: false   # payload limpio (opcional)
 
+  # El Gateway valida JWT con la CLAVE PÚBLICA (monta el mismo public.pem aquí)
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          public-key-location: file:/D:/Proyectos backend/prueba-backendSpringBoot/claves/public_key.pem
+
 management:
   endpoints:
     web:
